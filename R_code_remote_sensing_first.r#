@@ -1,6 +1,22 @@
 # Il mio primo codice in R per il telerilevamento!
+# utilizzare " per import da esterno
+# utilizzare parentesi per le funzioni
 setwd("C:/lab/") #Windows
-library(raster)
-p224r63_2011 <- brick("p224r63_2011_masked.grd")
-p224r63_2011
-plot(p224r63_2011)
+library(raster) #per richiamare pacchetto già installato
+p224r63_2011 <- brick("p224r63_2011_masked.grd") # multi-layer raster object
+p224r63_2011 # associazione 
+plot(p224r63_2011) # rappresentazione grafica
+
+# B1: blue
+# B2: green
+# B3: red
+# B4: NIR
+
+cl <- colorRampPalette(c("black","grey","light grey"))(100) # per cambiare colore
+plot(p224r63_2011, col=cl)
+
+clg <- colorRampPalette(c('dark green','green','light green'))(100) # ex colour change
+plot(p224r63_2011$B2_sre, col=clg)
+
+cl1 <- colorRampPalette(c("blue","green","orange","red")) (100) # ex colour change
+plot(p224r63_2011, col=cl1)
