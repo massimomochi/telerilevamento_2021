@@ -7,10 +7,7 @@ p224r63_2011 <- brick("p224r63_2011_masked.grd") # multi-layer raster object
 p224r63_2011 # associazione 
 plot(p224r63_2011) # rappresentazione grafica
 
-# B1: blue
-# B2: green
-# B3: red
-# B4: NIR
+# day 2
 
 cl <- colorRampPalette(c("black","grey","light grey"))(100) # per cambiare colore
 plot(p224r63_2011, col=cl)
@@ -20,3 +17,65 @@ plot(p224r63_2011$B2_sre, col=clg)
 
 cl1 <- colorRampPalette(c("blue","green","orange","red")) (100) # ex colour change
 plot(p224r63_2011, col=cl1)
+
+# day 3
+
+# Bande Landsat
+# B1: blu
+# B2: verde
+# B3: rosso
+# B4: infrarosso vicino
+# B5: infrarosso medio
+# B6: infrarosso termico
+# B7: infrarosso medio
+
+#dev.off will clean the current graph
+
+dev.off
+
+plot(p224r63_2011$B1_sre)
+plot(p224r63_2011$B2_sre)
+
+#
+par(mfrow=c(1,2))
+plot(p224r63_2011$B1_sre)
+plot(p224r63_2011$B2_sre)
+ 
+    
+# 2 row, 1 columns
+par(mfrow=c(2,1))
+plot(p224r63_2011$B1_sre)
+plot(p224r63_2011$B2_sre)
+
+# plot the first four bands of Landsat
+par(mfrow=c(4,1))
+plot(p224r63_2011$B1_sre)
+plot(p224r63_2011$B2_sre)
+plot(p224r63_2011$B3_sre)
+plot(p224r63_2011$B4_sre)
+
+par(mfrow=c(2,2))
+plot(p224r63_2011$B1_sre)
+plot(p224r63_2011$B2_sre)
+plot(p224r63_2011$B3_sre)
+plot(p224r63_2011$B4_sre)
+
+cl <- colorRampPalette(c("dark blue","blue","light blue"))(100) # per cambiare colore
+plot(p224r63_2011$B1_sre, col=cl)
+
+clg <- colorRampPalette(c('dark green','green','light green'))(100) # ex colour change
+plot(p224r63_2011$B2_sre, col=clg)
+
+cl1 <- colorRampPalette(c("dark red","red","pink")) (100) # ex colour change
+plot(p224r63_2011$B3_sre, col=cl1)
+
+clnir <- colorRampPalette(c("red","orange","yellow")) (100) # ex colour change
+plot(p224r63_2011$B4_sre, col=clnir)
+
+
+
+
+
+ 
+
+
