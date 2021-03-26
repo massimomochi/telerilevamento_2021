@@ -72,6 +72,45 @@ plot(p224r63_2011$B3_sre, col=cl1)
 clnir <- colorRampPalette(c("red","orange","yellow")) (100) # ex colour change
 plot(p224r63_2011$B4_sre, col=clnir)
 
+# RGB 
+
+plotRGB(p224r63_2011, r=3, g=2, b=1, stretch="Lin")
+
+plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Lin")
+
+# Exercise: mount NIR ontop the G of RGB
+
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin")
+plotRGB(p224r63_2011, r=3, g=2, b=4, stretch="Lin")
+
+par(mfrow=c(2,2))
+plotRGB(p224r63_2011, r=3, g=2, b=1, stretch="Lin")
+plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Lin")
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin")
+plotRGB(p224r63_2011, r=3, g=2, b=4, stretch="Lin")
+
+#esercizio di stampa su PDF
+pdf("il_mio_primo_pdf_su_R.pdf")
+par(mfrow=c(2,2))
+plotRGB(p224r63_2011, r=3, g=2, b=1, stretch="Lin")
+plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Lin")
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin")
+plotRGB(p224r63_2011, r=3, g=2, b=4, stretch="Lin")
+
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin")
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="hist")
+
+#par natural colours, false colours and false colours with histogram stratching
+
+par(mfrow=c(3,1))
+plotRGB(p224r63_2011, r=3, g=2, b=1, stretch="Lin")
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin")
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="hist")
+
+#installare nuovo pacchetto per prossima lezione 
+
+install.packages("RStoolbox")
+
 
 
 
