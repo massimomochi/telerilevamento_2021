@@ -31,7 +31,7 @@ plot(p224r63_2011, col=cl1)
 
 #dev.off will clean the current graph
 
-dev.off
+dev.off 
 
 plot(p224r63_2011$B1_sre)
 plot(p224r63_2011$B2_sre)
