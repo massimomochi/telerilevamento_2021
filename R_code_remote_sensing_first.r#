@@ -36,7 +36,7 @@ dev.off
 plot(p224r63_2011$B1_sre)
 plot(p224r63_2011$B2_sre)
 
-#
+# 1 row, 1 columns
 par(mfrow=c(1,2))
 plot(p224r63_2011$B1_sre)
 plot(p224r63_2011$B2_sre)
@@ -111,10 +111,38 @@ plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="hist")
 
 install.packages("RStoolbox")
 
+#multitemporal set
+#utilizzo comando "brick" per importare nuova immagine del 1988
 
+p224r63_1988 <- brick("p224r63_1988_masked.grd")
+p224r63_1988
 
+plot(p224r63_1988)
 
+#faccio i due plot e li metto sulla stessa rappresentazione grafica con il comando "par"
 
- 
+par(mfrow=c(2,1))
+plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Lin")
+plotRGB(p224r63_1988, r=4, g=3, b=2, stretch="Lin")
 
+#cambio lo stretch da "lin" a "hist" per evidenziare meglio i corsi d'acqua
 
+par(mfrow=c(2,1))
+plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Hist")
+plotRGB(p224r63_1988, r=4, g=3, b=2, stretch="Hist")
+
+#par con 2 righe e 2 colonne per mettere insieme tutte e 4 le immagini
+par(mfrow=c(2,2))
+plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Lin")
+plotRGB(p224r63_1988, r=4, g=3, b=2, stretch="Lin")
+plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Hist")
+plotRGB(p224r63_1988, r=4, g=3, b=2, stretch="Hist")
+
+#pdf
+pdf("pdf_2_con_R.pdf")
+par(mfrow=c(2,2))
+plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Lin")
+plotRGB(p224r63_1988, r=4, g=3, b=2, stretch="Lin")
+plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Hist")
+plotRGB(p224r63_1988, r=4, g=3, b=2, stretch="Hist")
+dev.off()
