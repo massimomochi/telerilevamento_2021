@@ -12,5 +12,6 @@ albedo <- raster("")
 cl <- colorRampPalette(c('light blue','green','red','yellow'))(100) 
 plot(albedo, col=cl)
 
+#resampling 
 albedores <- aggregate(albedo, fact=100)
 plot(albedores, col=cl)
