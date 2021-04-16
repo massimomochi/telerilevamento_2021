@@ -5,6 +5,8 @@ library(knitr)
 
 setwd("C:/lab/") # Windows
 
-stitch("~/Downloads/R_code_temp.r", template=system.file("misc", "knitr-template.Rnw", package="knitr"))
 
+#per creare report PDF del codice con grafici
+stitch("R_code_Greenland.r", template=system.file("misc", "knitr-template.Rnw", package="knitr"))
+stitch("codice.r", template=system.file("misc", "knitr-template.Rnw", package="knitr"))
 
