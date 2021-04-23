@@ -30,3 +30,22 @@ sun <- brick("Solar_Orbiter_s_first_view_of_the_Sun.png")
 # Unsupervised classification
 sunc <- unsuperClass(sun, nClasses=3)
 plot(sunc$map)
+
+# Gran Canyon 
+
+library(raster)
+library(RStoolbox)
+
+setwd("C:/lab/") # Windows
+
+dolansprings <- brick("dolansprings_oli_2013088_canyon_lrg.jpg")
+
+plotRGB(dolansprings, 1,2,3, stretch="lin")
+plotRGB(dolansprings, 3,2,1, stretch="lin")
+
+plotRGB(dolansprings, 1,2,3, stretch"hist")
+
+dsc <- unsuperClass(dolansprings, nClasses=2)
+plot(dsc$map)
+cl <- colorRampPalette(c('yellow','red','black'))(100)
+plot(dsc3$map,col=cl)
