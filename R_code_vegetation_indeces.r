@@ -1,6 +1,11 @@
 # R_code_vegetation_indeces
 
+
+install.packages("raster")
 library(raster)
+install.packages("rasterdiv")
+library(rasterdiv)
+library(rasterVis)
 
 setwd("C:/lab/")
 
@@ -62,6 +67,17 @@ difndvi <- ndvi1 - ndvi2
 
 cld <- colorRampPalette(c('blue','white','red'))(100) 
 plot(difndvi, col=cld)
+
+# worldwide NDVI
+
+plot(copNDVI)
+
+copNDVI <- reclassify(copNDVI, cbind(253:255, NA))
+plot(copNDVI)
+
+#rasterVis package needed
+
+levelplot(copNDVI)
 
 
 
