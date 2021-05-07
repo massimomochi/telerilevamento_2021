@@ -87,3 +87,4 @@ p2 <- ggplot(percentages, aes(x=cover, y=percent_2006, color=cover)) + geom_bar(
 
 
 
+
