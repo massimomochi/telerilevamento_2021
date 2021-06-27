@@ -27,8 +27,8 @@
 # install.packages("raster")
 library(raster)
 
-setwd("~/lab/") # Linux
-# setwd("C:/lab/") # Windows
+#setwd("~/lab/") # Linux
+setwd("C:/lab/") # Windows
 # setwd("/Users/name/Desktop/lab/") # Mac 
 
 p224r63_2011 <- brick("p224r63_2011_masked.grd")
@@ -195,8 +195,8 @@ library(rasterVis)
 
 # library(rgdal)
 
-setwd("~/lab/greenland") # Linux
-# setwd("C:/lab/greenland") # Windows
+# setwd("~/lab/greenland") # Linux
+setwd("C:/lab/greenland") # Windows
 # setwd("/Users/name/Desktop/lab/greenland") # Mac 
 
 lst_2000 <- raster("lst_2000.tif")
@@ -261,8 +261,8 @@ levelplot(melt_amount, col.regions=clb)
 library(raster)
 library(ncdf4)
 
-setwd("~/lab/") # Linux
-# setwd("C:/lab/") # Windows
+# setwd("~/lab/") # Linux
+setwd("C:/lab/") # Windows
 # setwd("/Users/name/Desktop/lab/") # Mac 
 
 albedo <- raster("c_gls_ALBH_202006130000_GLOBE_PROBAV_V1.5.1.nc")
@@ -293,8 +293,8 @@ stitch("~/Downloads/R_code_temp.r", template=system.file("misc", "knitr-template
 library(raster)
 library(RStoolbox)
 
-setwd("~/lab/") # Linux
-# setwd("C:/lab/") # Windows
+# setwd("~/lab/") # Linux
+setwd("C:/lab/") # Windows
 # setwd("/Users/name/Desktop/lab/") # Mac 
 
 p224r63_2011 <- brick("p224r63_2011_masked.grd")
@@ -334,8 +334,8 @@ str(p224r63_2011res_pca)
 library(raster)
 library(RStoolbox)
 
-setwd("~/lab/") # Linux
-# setwd("C:/lab/") # Windows
+# setwd("~/lab/") # Linux
+setwd("C:/lab/") # Windowss
 # setwd("/Users/name/Desktop/lab/") # Mac 
 
 so <- brick("Solar_Orbiter_s_first_views_of_the_Sun_pillars.jpg")
@@ -380,7 +380,7 @@ library(RStoolbox)
 library(ggplot2)
 library(gridExtra)
 
-setwd("~/lab/")
+setwd("C:/lab/") # Windows
 
 p224r63 <- brick("p224r63_2011_masked.grd")
 
@@ -406,8 +406,8 @@ library(rasterdiv) # for the worldwide NDVI
 library(rasterVis)
 
 
-setwd("~/lab/") # Linux
-# setwd("C:/lab/") # Windows
+# setwd("~/lab/") # Linux
+setwd("C:/lab/") # Windows
 # setwd("/Users/name/Desktop/lab/") # Mac
 
 defor1 <- brick("defor1.jpg")
@@ -501,8 +501,8 @@ library(ggplot2)
 # install.packages("gridExtra")
 library(gridExtra) # for grid.arrange plotting
 
-setwd("~/lab/") # Linux
-# setwd("C:/lab/") # Windows
+# setwd("~/lab/") # Linux
+setwd("C:/lab/") # Windows
 # setwd("/Users/name/Desktop/lab/") # Mac
 
 # NIR 1, RED 2, GREEN 3
@@ -589,8 +589,8 @@ library(gridExtra) # for plotting ggplots together
 library(viridis) # for ggplot colouring
 
 
-setwd("~/lab/") # Linux
-# setwd("C:/lab/") # Windows
+# setwd("~/lab/") # Linux
+setwd("C:/lab/") # Windows
 # setwd("/Users/name/Desktop/lab/") # Mac
 
 sent <- brick("sentinel.png")
@@ -681,9 +681,7 @@ library(raster)
 library(rgdal)
 library(ggplot2)
 
-setwd("~/lab/")
-# setwd("/Users/utente/lab") #mac
-# setwd("C:/lab/") # windows
+setwd("C:/lab/") # Windows
 
 defor2 <- brick("defor2.jpg")
 
